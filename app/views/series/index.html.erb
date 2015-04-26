@@ -16,8 +16,8 @@
     <% @series.each do |series| %>
       <tr>
         <td><%= series.roundNum %></td>
-        <td><%= series.team1_id %></td>
-        <td><%= series.team2_id %></td>
+        <td><%= Team.find(series.team1_id).name %></td>
+        <td><%= Team.find(series.team2_id).name %></td>
         <td><%= link_to 'Show', series %></td>
         <td><%= link_to 'Edit', edit_series_path(series) %></td>
         <td><%= link_to 'Destroy', series, method: :delete, data: { confirm: 'Are you sure?' } %></td>

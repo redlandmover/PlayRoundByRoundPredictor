@@ -7,12 +7,12 @@
 
 <p>
   <strong>Team1:</strong>
-  <%= @series.team1_id %>
+  <%= Team.find(@series.team1_id).name %>
 </p>
 
 <p>
   <strong>Team2:</strong>
-  <%= @series.team2_id %>
+  <%= Team.find(@series.team2_id).name %>
 </p>
 
 <%= link_to 'Edit', edit_series_path(@series) %> |
